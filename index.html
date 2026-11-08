@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Limora Home &amp; Furniture – Live Beautifully, Furnish Better</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7f0;--ink:#1a1712;--mute:#6b6459;--card:#ffffff;--line:#e6dfd0;--dark:#14110d;--gold:#b8862b;--gold2:#f0cf75;--gold-grad:linear-gradient(120deg,#a8741d,#f0cf75 45%,#b8862b);
+--serif:'Bodoni Moda','Didot','Times New Roman',serif;--sans:'Jost','Helvetica Neue',Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1812;--ink:#f4efe3;--mute:#a79f90;--card:#25211a;--line:#3a3429}}
+:root[data-theme="dark"]{--bg:#1b1812;--ink:#f4efe3;--mute:#a79f90;--card:#25211a;--line:#3a3429}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1180px,92%);margin:0 auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0}
+.gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--dark);border-bottom:1px solid #3a2f18}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--dark);z-index:30}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#f4efe3}
+.brand img{height:50px;width:auto;border-radius:6px;background:#fff;padding:2px 6px}
+.brand b{font:700 21px var(--serif);letter-spacing:.12em}
+nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+nav a{color:#e9e2d2;text-decoration:none;font-weight:500;font-size:15px}
+nav a:hover{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font:600 15px var(--sans);text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold-grad);color:#1a1205;box-shadow:0 8px 24px rgba(184,134,43,.35)}
+.btn-wa{background:#1fa855;color:#fff}
+.btn-ghost{border:1.5px solid var(--gold2);color:var(--gold2)}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.hero{background:radial-gradient(1000px 500px at 80% 0,#3a2c10 0,transparent 60%),var(--dark);color:#f4efe3;padding:72px 0 96px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(44px,6.4vw,84px);letter-spacing:-.01em}
+.hero p{max-width:34em;color:#cfc7b6;font-size:19px;margin:26px 0 34px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.arch{position:relative;justify-self:center;width:min(100%,430px)}
+.arch .frame{border-radius:999px 999px 18px 18px;overflow:hidden;aspect-ratio:3/4;border:3px solid transparent;background:linear-gradient(var(--dark),var(--dark)) padding-box,var(--gold-grad) border-box;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.arch .frame img{width:100%;height:100%;object-fit:cover}
+.arch .chip{position:absolute;left:-34px;bottom:48px;width:150px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:4px solid var(--dark);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+.arch .chip img{width:100%;height:100%;object-fit:cover}
+section{padding:92px 0}
+.head{max-width:640px;margin-bottom:48px}
+.head h2{font-size:clamp(34px,4.4vw,54px)}
+.head p{color:var(--mute);margin:14px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px 6px 22px 6px;overflow:hidden;display:flex;flex-direction:column}
+.card .ph{aspect-ratio:4/5;overflow:hidden;background:var(--line)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover img{transform:scale(1.04)}
+.card .tx{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:24px}
+.card p{margin:0;color:var(--mute);font-size:15.5px;flex:1}
+.ask{margin-top:12px;align-self:flex-start;display:inline-flex;gap:8px;align-items:center;font-weight:600;color:#fff;background:#1fa855;padding:10px 18px;border-radius:999px;text-decoration:none;font-size:14.5px}
+.ask svg{width:17px;height:17px;fill:currentColor}
+.ask:hover{background:#17893f}
+.dark{background:var(--dark);color:#f4efe3}
+.dark .head p{color:#b9b09d}
+.vids{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.vids video{width:100%;border-radius:6px 6px 22px 6px;background:#000;border:1px solid #3a2f18;max-height:560px;object-fit:contain}
+.pro{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--gold)}
+.pro div{padding:30px 30px 8px 0}
+.pro div+div{padding-left:30px;border-left:1px solid var(--line)}
+.pro h3{font-size:25px;margin-bottom:8px}
+.pro p{margin:0;color:var(--mute)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contact h2{font-size:clamp(36px,5vw,64px)}
+.contact p{color:#cfc7b6;max-width:30em}
+.lines{display:grid;gap:14px}
+.lines a{display:flex;gap:18px;align-items:center;text-decoration:none;padding:20px 24px;border:1px solid #4a3c1c;border-radius:6px 6px 22px 6px;background:rgba(255,255,255,.03)}
+.lines a:hover{border-color:var(--gold2);background:rgba(240,207,117,.07)}
+.lines small{display:block;color:#a99f8b;font-size:13.5px}
+.lines b{font:500 21px var(--serif);word-break:break-all}
+.lines svg{width:28px;height:28px;flex:none;fill:var(--gold2)}
+footer{background:#0c0a07;color:#a99f8b;text-align:center;padding:30px 0;font-size:14.5px}
+footer em{font-family:var(--serif);color:var(--gold2)}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:25;width:62px;height:62px;border-radius:50%;background:#1fa855;display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.4)}
+.fab svg{width:34px;height:34px;fill:#fff}
+@media (max-width:900px){
+.hero .wrap,.contact .wrap{grid-template-columns:1fr;gap:44px}
+.grid{grid-template-columns:repeat(2,1fr)}
+.vids,.pro{grid-template-columns:1fr}
+.pro div,.pro div+div{padding:24px 0 8px;border-left:0}
+.pro div+div{border-top:1px solid var(--line)}
+nav ul{display:none}
+.arch .chip{left:-8px}
+section{padding:68px 0}
+}
+@media (max-width:560px){.grid{grid-template-columns:1fr}.brand b{font-size:17px}.nav .btn{padding:11px 18px}.brand img{height:42px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a7.3 7.3 0 0 1-3.6-3.1c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2 3.1 5 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.7-.7 2-1.4s.2-1.300.2-1.400c-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.600 15L2 22l5.200-1.400A10 10 0 1 0 12 2zm0 18.200a8.200 8.200 0 0 1-4.200-1.200l-.3-.2-3.100.8.800-3-.2-.3A8.200 8.200 0 1 1 12 20.200z"/></symbol>
+<symbol id="ml" viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.200L4.500 7v10.500h15V7zM5.500 7 12 11.500 18.500 7z"/></symbol>
+<symbol id="ph" viewBox="0 0 24 24"><path d="M6.600 10.800a15 15 0 0 0 6.600 6.600l2.200-2.200a1 1 0 0 1 1-.25 11 11 0 0 0 3.500.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.200.2 2.400.56 3.500a1 1 0 0 1-.25 1z"/></symbol>
+</defs></svg>
+
+<header><div class="wrap nav">
+<a class="brand" href="#top"><img src="logo.jpg" alt="Limora Home &amp; Furniture logo"><b>LIMORA</b></a>
+<nav aria-label="Main"><ul><li><a href="#collection">Collection</a></li><li><a href="#showroom">Showroom</a></li><li><a href="#why">Why Limora</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<a class="btn btn-wa" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20I%27d%20like%20to%20ask%20about%20your%20stock." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Ask about stock</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Live <span class="gold">beautifully,</span><br>furnish better.</h1>
+<p>Velvet stools, marble-look tables, gold-finish accents and dining sets for every room. See something you like? Message us and we’ll tell you what’s in stock.</p>
+<div class="cta">
+<a class="btn btn-gold" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20I%27d%20like%20to%20ask%20about%20your%20stock." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Ask about stock on WhatsApp</a>
+<a class="btn btn-ghost" href="#collection">Browse the collection</a>
+</div></div>
+<div class="arch"><div class="frame"><img src="oval-coffee-table.jpg" alt="Cream channelled sofa with an oval marble-look coffee table in the Limora showroom"></div>
+<div class="chip"><img src="nesting-tables.jpg" alt="Gold nesting coffee tables"></div></div>
+</div></div>
+
+<section id="collection"><div class="wrap">
+<div class="head"><h2>The collection</h2><p>A look at some of the pieces on our showroom floor. Tap “Ask about stock” on any piece and the chat opens with that item already named.</p></div>
+<div class="grid">
+<article class="card"><div class="ph"><img src="bar-stools.jpg" alt="Black velvet bar stools with black metal legs" loading="lazy"></div><div class="tx"><h3>Velvet bar stools</h3><p>Curved-back stools with black metal legs and a footrest. Shown in black; mustard and green also on the floor.</p><a class="ask" target="_blank" rel="noopener" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20is%20the%20velvet%20bar%20stool%20in%20stock%3F"><svg><use href="#wa"/></svg>Ask about stock</a></div></article>
+<article class="card"><div class="ph"><img src="nesting-tables.jpg" alt="Set of two round marble-look nesting tables with gold frames" loading="lazy"></div><div class="tx"><h3>Gold nesting coffee tables</h3><p>A set of two round marble-look tops on polished gold frames. Pull them apart or tuck them together.</p><a class="ask" target="_blank" rel="noopener" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20are%20the%20gold%20nesting%20coffee%20tables%20in%20stock%3F"><svg><use href="#wa"/></svg>Ask about stock</a></div></article>
+<article class="card"><div class="ph"><img src="oval-coffee-table.jpg" alt="Oval marble-look coffee table with walnut-finish legs" loading="lazy"></div><div class="tx"><h3>Oval coffee table</h3><p>A glossy, veined top on two rounded walnut-finish legs. The centrepiece for a calm lounge.</p><a class="ask" target="_blank" rel="noopener" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20is%20the%20oval%20coffee%20table%20in%20stock%3F"><svg><use href="#wa"/></svg>Ask about stock</a></div></article>
+<article class="card"><div class="ph"><img src="glass-dining-set.jpg" alt="Round glass dining table with four grey upholstered chairs" loading="lazy"></div><div class="tx"><h3>Round glass dining set</h3><p>Clear glass top on a black cross base, with four grey armchairs. Light and open for smaller spaces.</p><a class="ask" target="_blank" rel="noopener" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20is%20the%20round%20glass%20dining%20set%20in%20stock%3F"><svg><use href="#wa"/></svg>Ask about stock</a></div></article>
+<article class="card"><div class="ph"><img src="gold-side-tables.jpg" alt="Two gold geometric side tables with glass tops" loading="lazy"></div><div class="tx"><h3>Gold glass side tables</h3><p>A set of two geometric gold frames with glass tops. Sits beside a sofa or recliner.</p><a class="ask" target="_blank" rel="noopener" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20are%20the%20gold%20glass%20side%20tables%20in%20stock%3F"><svg><use href="#wa"/></svg>Ask about stock</a></div></article>
+<article class="card"><div class="ph"><img src="marble-dining-table.jpg" alt="Square marble-look dining table with grey velvet chairs" loading="lazy"></div><div class="tx"><h3>Marble-look dining table</h3><p>A square glossy top on a slim black pedestal, paired with soft grey velvet chairs.</p><a class="ask" target="_blank" rel="noopener" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20is%20the%20marble-look%20dining%20table%20in%20stock%3F"><svg><use href="#wa"/></svg>Ask about stock</a></div></article>
+</div></div></section>
+
+<section id="showroom" class="dark"><div class="wrap">
+<div class="head"><h2 class="gold">Walk the showroom</h2><p>Take a look around before you visit. Ask us on WhatsApp about anything you spot.</p></div>
+<div class="vids">
+<video controls muted playsinline preload="metadata" src="showroom-1.mp4"></video>
+<video controls muted playsinline preload="metadata" src="showroom-2.mp4"></video>
+</div></div></section>
+
+<section id="why"><div class="wrap">
+<div class="head"><h2>Furnishing made simple</h2></div>
+<div class="pro">
+<div><h3>Ask first</h3><p>Message us about any piece and get a reply on stock before you make the trip.</p></div>
+<div><h3>Pieces you can picture</h3><p>Dining sets, coffee tables, stools and side tables that work together in one room.</p></div>
+<div><h3>A real person replies</h3><p>Chat on WhatsApp, send an email or call. Pick whichever suits you.</p></div>
+</div></div></section>
+
+<section id="contact" class="contact dark"><div class="wrap">
+<div><h2>Is it <span class="gold">in stock?</span></h2><p>Send us a message with the piece you like. We’ll let you know what’s available.</p>
+<div class="cta" style="margin-top:28px"><a class="btn btn-wa" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20I%27d%20like%20to%20ask%20about%20your%20stock." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Chat on WhatsApp</a></div></div>
+<div class="lines">
+<a href="https://wa.me/27786117202" target="_blank" rel="noopener"><svg><use href="#wa"/></svg><span><small>WhatsApp</small><b>078 611 7202</b></span></a>
+<a href="tel:+27786117202"><svg><use href="#ph"/></svg><span><small>Call</small><b>078 611 7202</b></span></a>
+<a href="mailto:limorahousefurniture@gmail.com"><svg><use href="#ml"/></svg><span><small>Email</small><b>limorahousefurniture@gmail.com</b></span></a>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><em>Limora Home &amp; Furniture</em> — Live Beautifully, Furnish Better<br>© 2026 Limora Home &amp; Furniture. All rights reserved.</div></footer>
+<a class="fab" aria-label="Ask about stock on WhatsApp" href="https://wa.me/27786117202?text=Hi%20Limora%2C%20I%27d%20like%20to%20ask%20about%20your%20stock." target="_blank" rel="noopener"><svg><use href="#wa"/></svg></a>
+</body>
+</html>
